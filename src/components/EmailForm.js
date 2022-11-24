@@ -34,7 +34,7 @@ const EmailForm = ({
         },
       };
       const { data } = await axios.post(
-        `/api/send`,
+        `${process.env.REACT_APP_API}/send`,
         { name, email, subject, message },
         config
       );
